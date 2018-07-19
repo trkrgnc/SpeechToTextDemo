@@ -24,16 +24,16 @@ public class SpeectoTextGarantiUnifiedcommApplication {
 
 		try (SpeechClient speechClient = SpeechClient.create()) {
 
-			Path path = Paths.get("\\\\pgarappstp01\\Share\\karisik.flac");
+			Path path = Paths.get("\\\\pgarappstp01\\Share\\kullan_1.wav");
 			byte[] data = Files.readAllBytes(path);
 			ByteString audioBytes = ByteString.copyFrom(data);
 
-			RecognitionConfig.AudioEncoding encoding = RecognitionConfig.AudioEncoding.FLAC;
-			int sampleRateHertz = 44100;
+			//RecognitionConfig.AudioEncoding encoding = RecognitionConfig.AudioEncoding.FLAC;
+			//int sampleRateHertz = 44100;
 			String languageCode = "tr-TR";
 			RecognitionConfig config = RecognitionConfig.newBuilder()
-					.setEncoding(encoding)
-					.setSampleRateHertz(sampleRateHertz)
+					//.setEncoding(encoding)
+					//.setSampleRateHertz(sampleRateHertz)
 					.setLanguageCode(languageCode)
 					.build();
 
